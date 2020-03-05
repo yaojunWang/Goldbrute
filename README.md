@@ -13,11 +13,11 @@ Querying the Shodan search engine for systems with RDP enabled it is possible to
 “An infected system will first be instructed to download the bot code. The download is very large (80 MBytes) and includes the complete Java Runtime. The bot itself is implemented in a Java class called GoldBrute” continues the expert.
 
 “Initially, the bot will start scanning random IP addresses to find more hosts with exposed RDP servers. These IPs are reported back to the C&C server. After the bot reported 80 new victims, the C&C server will assign a set of targets to brute force to the bot.” 
-GoldBrute botnet
 
 ![Image The complete attack chain](./chain.jpg)
 
 Botnet brute-forces RDP connection and gains access to a poorly protected Windows system.
+
 It downloads a big zip archive containing the GoldBrute Java code and the Java runtime itself. It uncompresses and runs a jar file called “bitcoin.dll”.
 
 The bot will start to scan the internet for “brutable” RDP servers and send their IPs to the C2 that in turn sends a list of IP addresses to brute force.
@@ -29,6 +29,5 @@ According to the researcher, the list of “brutable” RDP targets is rapidly g
 “Analyzing the GoldBrute code and understanding its parameters and thresholds, it was possible to manipulate the code to make it save all “host + username + password” combinations on our lab machine.” continues the expert.
 
 “After 6 hours, we received 2.1 million IP addresses from the C2 server from which 1,596,571 are unique. Of course, we didn’t execute the brute-force phase. With the help of an ELK stack, it was easy to geolocate and plot all the addresses in a global world map, as shown below.”
-goldbrute botnet map
 
 The GoldBrute botnet is difficult to detect because every bot only launches one password-guessing attempt per victim.
