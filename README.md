@@ -15,9 +15,8 @@ Querying the Shodan search engine for systems with RDP enabled it is possible to
 “Initially, the bot will start scanning random IP addresses to find more hosts with exposed RDP servers. These IPs are reported back to the C&C server. After the bot reported 80 new victims, the C&C server will assign a set of targets to brute force to the bot.” 
 GoldBrute botnet
 
-![Image text](https://i0.wp.com/securityaffairs.co/wordpress/wp-content/uploads/2019/06/GoldBrute-botnet.png?w=974&ssl=1)
+![Image The complete attack chain](https://www.linuxprobe.com/wp-content/uploads/2019/06/2-7.jpg)
 
-Below the complete attack chain:
 Botnet brute-forces RDP connection and gains access to a poorly protected Windows system.
 It downloads a big zip archive containing the GoldBrute Java code and the Java runtime itself. It uncompresses and runs a jar file called “bitcoin.dll”.
 
