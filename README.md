@@ -31,3 +31,5 @@ According to the researcher, the list of “brutable” RDP targets is rapidly g
 “After 6 hours, we received 2.1 million IP addresses from the C2 server from which 1,596,571 are unique. Of course, we didn’t execute the brute-force phase. With the help of an ELK stack, it was easy to geolocate and plot all the addresses in a global world map, as shown below.”
 
 The GoldBrute botnet is difficult to detect because every bot only launches one password-guessing attempt per victim.
+
+I change the class DownloadProjectsFilesClient.java to use local password and ip file.
